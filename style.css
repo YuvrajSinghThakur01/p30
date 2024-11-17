@@ -1,0 +1,277 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  /* Left Sidebar Navigation */
+  .sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    position: fixed;
+    height: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sidebar .logo img {
+    width: 80px;
+    border-radius: 50%;
+  }
+  
+  .sidebar .logo h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .sidebar .nav-links {
+    list-style: none;
+    padding-top: 30px;
+  }
+  
+  .sidebar .nav-links li {
+    margin: 20px 0;
+  }
+  
+  .sidebar .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar .nav-links li a:hover {
+    color: #f39c12;
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-left: 250px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db;
+    color: white;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+  }
+  
+  .hero-text {
+    max-width: 500px;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero .cta-button {
+    text-decoration: none;
+    background-color: #f39c12;
+    padding: 10px 25px;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero .cta-button:hover {
+    background-color: #e67e22;
+  }
+  
+  .hero-image {
+    max-width: 45%;
+    border-radius: 8px;
+  }
+  
+  /* About Section */
+  .about {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .about-text {
+    width: 50%;
+  }
+  
+  .about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  .about-image img {
+    width: 100%;
+    border-radius: 8px;
+    max-width: 500px;
+  }
+  
+  /* Services Section */
+  .services {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .service-card {
+    width: 30%;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+  }
+  
+  /* Contact Section */
+  .contact {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact form {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .contact button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+    }
+  
+    .main-content {
+      margin-left: 200px;
+    }
+  
+    .hero {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .hero-image {
+      width: 80%;
+      margin-top: 20px;
+    }
+  
+    .about {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .service-cards {
+      flex-direction: column;
+    }
+  
+    .service-card {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
